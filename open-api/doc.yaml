@@ -1,0 +1,151 @@
+openapi: 3.0.0
+info:
+  title: Demo API REST on Google App Engine
+  description: Admin & Products CRUD
+  version: 1.0.0
+
+
+servers:
+  - url: https://adrianrdz-mx-dev.uc.r.appspot.com
+    description: Servicios en ambiente DEV
+
+paths:
+  /api/admin/upsert:
+    post:
+      description: Create, Update & Delete Admins
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                data:
+                  type: object
+                  properties:
+                    name:
+                      type: string
+                      required: true
+                    account:
+                      type: string
+                      required: true
+                    password:
+                      type: string
+                      required: true
+                    status:
+                      type: string
+                      required: true
+                    phone:
+                      type: string
+                      required: true
+                    email:
+                      type: string
+                      required: true
+      responses:
+        '200':
+          description: Respuesta exitosa
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  data:
+                    type: object
+                    properties:
+                      status:
+                        type: string
+                        example: "ACK"
+
+  /api/product/upsert:
+    post:
+      description: Create, Update & Delete Products
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                data:
+                  type: object
+                  properties:
+                    sku:
+                      type: string
+                      required: true
+                    category:
+                      type: string
+                      required: true
+                    name:
+                      type: string
+                      required: true
+                    price:
+                      type: number
+                      required: true
+                    brand:
+                      type: string
+                      required: true
+                    status:
+                      type: string
+                      required: true
+      responses:
+        '200':
+          description: Respuesta exitosa
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  data:
+                    type: object
+                    properties:
+                      status:
+                        type: string
+                        example: "ACK"
+
+  /anonymous/product/get:
+    post:
+      description: Get a enabled product by name (exactly, search queries not allowed yet).
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                data:
+                  type: object
+                  properties:
+                    name:
+                      type: string
+                      required: true
+      responses:
+        '200':
+          description: Respuesta exitosa
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  products:
+                    type: array
+                    items:
+                      type: object
+                      properties:
+                        price:
+                          type: number
+                          example: 1000.99
+                        name:
+                          type: string
+                          example: "product name"
+                        brand:
+                          type: string
+                          example: "brand X"
+                        category:
+                          type: string
+                          example: "categoryN"
+                        sku:
+                          type: string
+                          example: "skuNNN"
+                        status:
+                          type: string
+                          example: "enabled"

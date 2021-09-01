@@ -1,0 +1,1 @@
+docker run -ti --rm -p 8080:8080 -e SWAGGER_JSON=/api/doc.yaml -v "$(pwd)":/api -u 1000:1000 swaggerapi/swagger-ui

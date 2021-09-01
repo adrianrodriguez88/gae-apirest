@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xmlns="http://java.sun.com/xml/ns/javaee"
+         xmlns:web="http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd"
+         xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd" version="2.5">
+
+    <servlet>
+        <servlet-name>AdminUpsert</servlet-name>
+        <servlet-class>com.zebrands.mx.ws.admin.AdminUpsert</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>AdminUpsert</servlet-name>
+        <url-pattern>/api/admin/upsert</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>AdminGet</servlet-name>
+        <servlet-class>com.zebrands.mx.ws.admin.AdminGet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>AdminGet</servlet-name>
+        <url-pattern>/api/admin/get</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>ProductUpsert</servlet-name>
+        <servlet-class>com.zebrands.mx.ws.admin.ProductUpsert</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>ProductUpsert</servlet-name>
+        <url-pattern>/api/product/upsert</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>ProductGet</servlet-name>
+        <servlet-class>com.zebrands.mx.ws.anonymous.ProductGet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>ProductGet</servlet-name>
+        <url-pattern>/anonymous/product/get</url-pattern>
+    </servlet-mapping>
+
+    <security-constraint>
+        <auth-constraint>
+            <role-name>admin</role-name>
+        </auth-constraint>
+    </security-constraint>
+
+</web-app>
