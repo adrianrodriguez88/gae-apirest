@@ -6,7 +6,7 @@
 
     <servlet>
         <servlet-name>AdminUpsert</servlet-name>
-        <servlet-class>com.zebrands.mx.ws.admin.AdminUpsert</servlet-class>
+        <servlet-class>com.company.mx.microservices.admin.AdminUpsert</servlet-class>
     </servlet>
     <servlet-mapping>
         <servlet-name>AdminUpsert</servlet-name>
@@ -15,7 +15,7 @@
 
     <servlet>
         <servlet-name>AdminGet</servlet-name>
-        <servlet-class>com.zebrands.mx.ws.admin.AdminGet</servlet-class>
+        <servlet-class>com.company.mx.microservices.admin.AdminGet</servlet-class>
     </servlet>
     <servlet-mapping>
         <servlet-name>AdminGet</servlet-name>
@@ -24,7 +24,7 @@
 
     <servlet>
         <servlet-name>ProductUpsert</servlet-name>
-        <servlet-class>com.zebrands.mx.ws.admin.ProductUpsert</servlet-class>
+        <servlet-class>com.company.mx.microservices.product.ProductUpsert</servlet-class>
     </servlet>
     <servlet-mapping>
         <servlet-name>ProductUpsert</servlet-name>
@@ -33,7 +33,7 @@
 
     <servlet>
         <servlet-name>ProductGet</servlet-name>
-        <servlet-class>com.zebrands.mx.ws.anonymous.ProductGet</servlet-class>
+        <servlet-class>com.company.mx.microservices.product.ProductGet</servlet-class>
     </servlet>
     <servlet-mapping>
         <servlet-name>ProductGet</servlet-name>
