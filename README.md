@@ -1,15 +1,27 @@
 # gae-apirest
+This repository includes an api rest demo that can be deployed on Google App Engine with maven.
 
-Para compilar/modificar el proyecto es necesario instalar:
-  -Google Cloud SDK: https://cloud.google.com/sdk/docs/install
-  -Maven: https://maven.apache.org/download.cgi
-  -Cloud Code Plugin: Uso IntelliJ y me sirve para configurar el proyecto con las características de google cloud, no recuerdo si es algo necesario del todo.
+## To compile this code download the following sdk's:
 
-Para ver la documentación en localhost:8080 es necesario:
-  -Instalar Docker: https://docs.docker.com/desktop/mac/install/
-  -Ejecutar el archivo sh dentro de la carpeta open-api.
+```
+- Google Cloud SDK ```https://cloud.google.com/sdk/docs/install``` and follow instructions.
+- Maven ```https://maven.apache.org/download.cgi```.
+- Cloud Code Plugin on IntelliJ ```@plugins```.
+```
 
-Para ver la base de datos se puede instalar: 
-  -Instalar Mongo Compass: https://www.mongodb.com/try/download/compass
+API documentation on Swagger: 
+
+```
+localhost:8080 requirements:
+  -Install Docker: https://docs.docker.com/desktop/mac/install/
+  -Execute sh file inside open-api directory.
+```
+
+Database Management: 
+```
+   -Install Mongo Compass: https://www.mongodb.com/try/download/compass
+```
+
+
   
   
